@@ -1,0 +1,119 @@
+:root {
+  --fondo: #14100d;
+  --panel: #1f1814;
+  --borde: #3a2e26;
+  --texto: #f3ebe3;
+  --suave: #bfae9f;
+  --acento: #d9a066;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font: 1rem/1.6 "Segoe UI", system-ui, sans-serif;
+}
+
+h1, h2 { font-family: Georgia, serif; line-height: 1.2; }
+h2 { font-size: 2rem; margin: 0 0 1rem; }
+a { color: var(--acento); }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Cabecera y menú */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+}
+header h1 { margin: 0; font-size: 1.5rem; }
+
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.25rem; }
+nav a { color: var(--suave); text-decoration: none; }
+nav a:hover { color: var(--texto); }
+
+/* Contenido */
+main section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+figure {
+  margin: 0;
+  background: var(--panel);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  overflow: hidden;
+}
+figcaption { padding: .7rem 1rem; color: var(--suave); }
+
+table { width: 100%; border-collapse: collapse; background: var(--panel); }
+caption { text-align: left; padding-bottom: .5rem; color: var(--suave); }
+th, td { padding: .8rem 1rem; text-align: left; border-bottom: 1px solid var(--borde); }
+thead th { color: var(--acento); }
+
+/* Formulario */
+form { display: grid; gap: .8rem; max-width: 520px; }
+label { color: var(--suave); }
+
+input, select, textarea {
+  background: var(--panel);
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: .65rem .8rem;
+  font: inherit;
+}
+input.error, select.error { border-color: #ff7a90; }
+
+button {
+  background: var(--acento);
+  color: #1a1008;
+  font-weight: 600;
+  border: 0;
+  border-radius: 8px;
+  padding: .75rem 1.2rem;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.1); }
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
+
+#mensaje { min-height: 1.5rem; margin: 0; }
+#mensaje.ok { color: #7be0a5; }
+#mensaje.mal { color: #ff7a90; }
+
+/* Footer */
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  border-top: 1px solid var(--borde);
+}
+address { font-style: normal; color: var(--suave); }
+footer ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
+footer p { color: var(--suave); font-size: .9rem; }
+
+/* Celulares */
+@media (max-width: 600px) {
+  header { flex-direction: column; align-items: flex-start; }
+  nav ul { flex-wrap: wrap; }
+  h2 { font-size: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
