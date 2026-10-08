@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Bolsa de café molido sobre un montoncito de café">
+<rect width="400" height="300" fill="#1f1814"/>
+<ellipse cx="200" cy="262" rx="130" ry="20" fill="#3a2417"/><ellipse cx="200" cy="252" rx="95" ry="16" fill="#4a2e1c"/>
+<path d="M130 60H270L288 250H112Z" fill="#a8744a"/><path d="M130 60H270L274 92H126Z" fill="#6b3f22"/>
+<g stroke="#8a5a3a" stroke-width="3" opacity=".7"><path d="M138 70H262"/><path d="M135 82H265"/></g>
+<rect x="152" y="120" width="96" height="94" rx="8" fill="#f3ebe3"/>
+<ellipse cx="200" cy="156" rx="16" ry="24" fill="#6b3f22" transform="rotate(25 200 156)"/><path d="M204 134C196 152 210 160 198 178" stroke="#f3ebe3" stroke-width="3" fill="none" stroke-linecap="round"/>
+<rect x="170" y="190" width="60" height="6" rx="3" fill="#bfae9f"/><rect x="180" y="202" width="40" height="5" rx="2.5" fill="#bfae9f"/>
+</svg>

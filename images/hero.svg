@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" role="img" aria-label="Taza de café humeante">
+  <style>
+    .vapor { fill: none; stroke: #d9a066; stroke-width: 9; stroke-linecap: round; opacity: 0;
+             animation: subir-vapor 3.6s ease-in-out infinite; }
+    .v2 { animation-delay: 1.2s; }
+    .v3 { animation-delay: 2.4s; }
+    .grano { animation: flotar 6s ease-in-out infinite; }
+    .g2 { animation-delay: -2s; }
+    .g3 { animation-delay: -4s; }
+    @keyframes subir-vapor {
+      0%   { transform: translateY(14px); opacity: 0; }
+      35%  { opacity: .9; }
+      100% { transform: translateY(-24px); opacity: 0; }
+    }
+    @keyframes flotar {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .vapor { animation: none; opacity: .8; }
+      .grano { animation: none; }
+    }
+  </style>
+  <defs>
+    <radialGradient id="brillo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#d9a066" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#d9a066" stop-opacity="0"/>
+    </radialGradient>
+    <g id="g">
+      <ellipse rx="22" ry="33" fill="#6b3f22"/>
+      <path d="M0 -30C11 -11 -11 11 0 30" stroke="#2b1a10" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <circle cx="300" cy="270" r="230" fill="url(#brillo)"/>
+
+  <g class="grano"><use href="#g" transform="translate(92 150) rotate(-28)"/></g>
+  <g class="grano g2"><use href="#g" transform="translate(130 330) rotate(32)"/></g>
+  <g class="grano g3"><use href="#g" transform="translate(510 120) rotate(18)"/></g>
+  <g class="grano g2"><use href="#g" transform="translate(528 330) rotate(-40)"/></g>
+
+  <ellipse cx="300" cy="418" rx="200" ry="30" fill="#000" opacity=".4"/>
+  <ellipse cx="300" cy="404" rx="190" ry="28" fill="#3a2e26"/>
+  <path d="M190 250H410L388 372Q383 408 350 408H250Q217 408 212 372Z" fill="#f3ebe3"/>
+  <path d="M410 284H436a38 38 0 0 1 0 76H392" fill="none" stroke="#f3ebe3" stroke-width="16"/>
+  <ellipse cx="300" cy="250" rx="110" ry="20" fill="#f3ebe3"/>
+  <ellipse cx="300" cy="252" rx="96" ry="14" fill="#5a3320"/>
+  <ellipse cx="300" cy="254" rx="58" ry="7" fill="#8a5a3a"/>
+
+  <path class="vapor" d="M255 205c-18-24 18-40 0-70"/>
+  <path class="vapor v2" d="M300 205c-18-24 18-40 0-70"/>
+  <path class="vapor v3" d="M345 205c-18-24 18-40 0-70"/>
+</svg>

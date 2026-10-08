@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Cappuccino con un corazón dibujado en la espuma">
+<rect width="400" height="300" fill="#1f1814"/>
+<circle cx="190" cy="150" r="125" fill="#3a2e26"/><circle cx="190" cy="150" r="100" fill="#f3ebe3"/>
+<rect x="278" y="132" width="62" height="36" rx="18" fill="#f3ebe3"/><rect x="292" y="142" width="34" height="16" rx="8" fill="#1f1814"/>
+<circle cx="190" cy="150" r="82" fill="#9b6a43"/>
+<path d="M190 205C132 168 138 112 172 114C184 115 190 124 190 132C190 124 196 115 208 114C242 112 248 168 190 205Z" fill="#f3ebe3"/>
+</svg>
