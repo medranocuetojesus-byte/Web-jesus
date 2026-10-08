@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Taza pequeña de espresso">
+<rect width="400" height="300" fill="#1f1814"/>
+<ellipse cx="200" cy="232" rx="125" ry="24" fill="#3a2e26"/>
+<path d="M140 135H260L250 200Q247 228 225 228H175Q153 228 150 200Z" fill="#f3ebe3"/>
+<path d="M260 150H278a24 24 0 0 1 0 48H252" fill="none" stroke="#f3ebe3" stroke-width="11"/>
+<ellipse cx="200" cy="135" rx="60" ry="12" fill="#f3ebe3"/><ellipse cx="200" cy="136" rx="52" ry="9" fill="#5a3320"/><ellipse cx="200" cy="137" rx="30" ry="4" fill="#c28a52"/>
+<g fill="none" stroke="#d9a066" stroke-width="6" stroke-linecap="round" opacity=".8"><path d="M175 105c-14-16 14-28 0-48"/><path d="M205 105c-14-16 14-28 0-48"/><path d="M235 105c-14-16 14-28 0-48"/></g>
+</svg>

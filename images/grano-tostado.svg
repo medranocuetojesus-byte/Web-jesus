@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Montón de granos de café tostado">
+<defs><g id="b"><ellipse rx="28" ry="42" fill="#6b3f22"/><path d="M0 -38C14 -14 -14 14 0 38" stroke="#2b1a10" stroke-width="5" fill="none" stroke-linecap="round"/></g></defs>
+<rect width="400" height="300" fill="#1f1814"/>
+<g transform="scale(.85)" transform-origin="200 150">
+<use href="#b" transform="translate(130 110) rotate(-25)"/><use href="#b" transform="translate(205 90) rotate(30)"/><use href="#b" transform="translate(280 120) rotate(-5)"/>
+<use href="#b" transform="translate(95 190) rotate(40)"/><use href="#b" transform="translate(170 175) rotate(-40)"/><use href="#b" transform="translate(245 190) rotate(15)"/><use href="#b" transform="translate(320 200) rotate(-30)"/>
+<use href="#b" transform="translate(135 260) rotate(10)"/><use href="#b" transform="translate(215 265) rotate(-55)"/><use href="#b" transform="translate(295 270) rotate(45)"/>
+</g>
+</svg>
