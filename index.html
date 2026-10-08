@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TuTienda: café de especialidad, tostado cada semana.">
   <title>TuTienda | Café de especialidad</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <a class="saltar" href="#productos">Saltar al contenido</a>
 
-  <header>
-    <h1>MI Tienda</h1>
-    <nav>
+  <header class="site-header">
+    <h1 class="marca"><a href="#inicio">TuTienda</a></h1>
+    <nav aria-label="Principal">
       <ul>
+        <li><a href="#inicio">Inicio</a></li>
         <li><a href="#productos">Productos</a></li>
         <li><a href="#pedido">Pedido</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -21,93 +24,109 @@
   </header>
 
   <main>
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <h2>Café tostado cada semana, servido con cuidado.</h2>
+        <p>Granos seleccionados, tostado en lotes pequeños y entrega fresca. Elige tu café y haz tu pedido en minutos.</p>
+        <div class="acciones">
+          <a class="btn" href="#pedido">Hacer un pedido</a>
+          <a class="btn btn-sec" href="#productos">Ver productos</a>
+        </div>
+      </div>
+      <img class="hero-img" src="images/hero.svg" alt="Taza de café humeante rodeada de granos" width="600" height="500">
+    </section>
+
     <section id="productos">
       <h2>Nuestros cafés</h2>
+
+      <div class="galeria">
+        <figure>
+          <div class="marco"><img src="images/cafe-espresso.svg" alt="Taza pequeña de espresso" width="400" height="300"></div>
+          <figcaption>Espresso de la casa</figcaption>
+        </figure>
+        <figure>
+          <div class="marco"><img src="images/latte-art.svg" alt="Cappuccino con un corazón en la espuma" width="400" height="300"></div>
+          <figcaption>Cappuccino</figcaption>
+        </figure>
+        <figure>
+          <div class="marco"><img src="images/grano-tostado.svg" alt="Montón de granos de café tostado" width="400" height="300"></div>
+          <figcaption>Granos tostados</figcaption>
+        </figure>
+        <figure>
+          <div class="marco"><img src="images/cafe-molido.svg" alt="Bolsa de café molido" width="400" height="300"></div>
+          <figcaption>Café molido</figcaption>
+        </figure>
+      </div>
+
+      <div class="tabla-wrap">
+        <table>
+          <caption>Lista de precios</caption>
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Presentación</th>
+              <th scope="col">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Café molido</th><td>250 g</td><td>S/ 22.00</td></tr>
+            <tr><th scope="row">Café en grano</th><td>500 g</td><td>S/ 40.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="nota">Aprende más sobre el origen del café en
+        <a href="https://es.wikipedia.org/wiki/Caf%C3%A9" target="_blank" rel="noopener">Wikipedia</a>.
+      </p>
     </section>
 
     <section id="pedido">
       <h2>Haz tu pedido</h2>
-      <form id="form-pedido" action="#" method="post">
+      <form id="form-pedido" action="#" method="post" novalidate>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
 
-  <label for="nombre">Nombre</label>
-  <input type="text" id="nombre" name="nombre" required minlength="3">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" required autocomplete="email">
 
-  <label for="correo">Correo</label>
-  <input type="email" id="correo" name="correo" required>
+        <label for="producto">Producto</label>
+        <select id="producto" name="producto" required>
+          <option value="">Elige un producto</option>
+          <option value="molido">Café molido</option>
+          <option value="grano">Café en grano</option>
+        </select>
 
-  <label for="producto">Producto</label>
-  <select id="producto" name="producto" required>
-    <option value="">Elige un producto</option>
-    <option value="molido">Café molido</option>
-    <option value="grano">Café en grano</option>
-  </select>
+        <label for="cantidad">Cantidad</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1">
 
-  <label for="cantidad">Cantidad</label>
-  <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1">
+        <label for="comentario">Comentario (opcional)</label>
+        <textarea id="comentario" name="comentario" rows="3"></textarea>
 
-  <label for="comentario">Comentario (opcional)</label>
-  <textarea id="comentario" name="comentario" rows="3"></textarea>
-
-  <button type="submit">Enviar pedido</button>
-  <p id="mensaje"></p>
-
-</form>
-      <h2>Haz tu pedido</h2>
+        <button class="btn" type="submit">Enviar pedido</button>
+        <p id="mensaje" role="status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 
-  <figure>
-  <img src="images/cafe-espresso.svg" alt="Taza de espresso recién servido" width="400" height="300">
-  <figcaption>Espresso de la casa</figcaption>
-</figure>
-
-
-<table>
-  <caption>Lista de precios</caption>
-  <thead>
-    <tr>
-      <th scope="col">Producto</th>
-      <th scope="col">Presentación</th>
-      <th scope="col">Precio</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Café molido</th>
-      <td>250 g</td>
-      <td>S/ 22.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Café en grano</th>
-      <td>500 g</td>
-      <td>S/ 40.00</td>
-    </tr>
-  </tbody>
-</table>
-
   <footer id="contacto">
-  <h2>Contacto</h2>
+    <h2>Contacto</h2>
 
-  <address>
-    TuTienda<br>
-    Av. Ejemplo 123, tu ciudad<br>
-    Tel: <a href="tel:+51 950723627">+51 950 723 627</a><br>
-    Correo: <a href="mailto:@tutienda.pe">jesus@tutienda.pe</a>
-  </address>
+    <address>
+      TuTienda<br>
+      Av. Ejemplo 123, tu ciudad<br>
+      Tel: <a href="tel:+51999999999">+51 999 999 999</a><br>
+      Correo: <a href="mailto:hola@tutienda.pe">hola@tutienda.pe</a>
+    </address>
 
-  <nav aria-label="Redes sociales">
-    <ul>
-      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
-      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
-      <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
-    </ul>
-  </nav>
+    <nav aria-label="Redes sociales">
+      <ul>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+      </ul>
+    </nav>
 
-  <p>&copy; 2026 Tienda. Proyecto académico de Jesús, SENATI.</p>
-</footer>
-  <a href="https://es.wikipedia.org/wiki/Caf%C3%A9" target="_blank" rel="noopener">Wikipedia</a>.
-</p>
+    <p class="copy">&copy; 2026 TuTienda. Proyecto académico de Jesús, SENATI.</p>
   </footer>
- 
 </body>
 </html>
